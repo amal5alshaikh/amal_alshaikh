@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.amarah"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="12"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.amarah.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.amarah.Login"
+            android:label="@string/title_activity_login" >
+        </activity>
+        <activity
+            android:name="com.example.amarah.Apartments"
+            android:label="@string/title_activity_apartments" >
+        </activity>
+        <activity
+            android:name="com.example.amarah.Whatch"
+            android:label="@string/title_activity_whatch" >
+        </activity>
+        <activity
+            android:name="com.example.amarah.MenuActivity"
+            android:label="@string/title_activity_menu" >
+        </activity>
+        <activity
+            android:name="com.example.amarah.Tabhost"
+            android:label="@string/title_activity_tabhost" >
+        </activity>
+        <activity
+            android:name="com.example.amarah.Newbuilding"
+            android:label="@string/title_activity_newbuilding" >
+        </activity>
+        <activity
+            android:name="com.example.amarah.Tabwithswipe"
+            android:label="@string/title_activity_tabwithswipe" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.amarah.Login_Activity"
+            android:label="@string/title_activity_login_"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+    </application>
+
+</manifest>

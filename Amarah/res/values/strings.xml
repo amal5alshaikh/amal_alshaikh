@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Amarah</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="todo">TODO</string>
+    <string name="title_activity_login">Login</string>
+    <string name="medium_text">Medium Text</string>
+    <string name="title_item_list">Items</string>
+    <string name="title_item_detail">Item Detail</string>
+    <string name="title_activity_apartments">Apartments</string>
+    <string name="title_activity_tab">Tab</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_activity_tabn">Tabn</string>
+    <string name="title_activity_whatch">Whatch</string>
+    <string name="title_activity_menu">MainActivity</string>
+    <string name="title_activity_tabhost">Tabhost</string>
+    <string name="title_activity_newbuilding">Newbuilding</string>
+    <string name="enter">Enter</string>
+    <string name="title_activity_tabwithswipe">Tabwithswipe</string>
+
+</resources>

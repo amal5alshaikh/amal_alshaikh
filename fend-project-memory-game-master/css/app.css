@@ -1,0 +1,242 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ffffff url('../img/geometry2.jpg');
+  /* Background pattern from https://pngtree.com/freepng/ink-pink-flowers-waft-background_1665182.html by Sandy Farrington */
+  font-family: 'Coda', cursive;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  color: #7636EC;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 50px;
+}
+/*
+ * Styles for the deck of cards
+ */
+.deck {
+  width: 660px;
+  min-height: 680px;
+  background: linear-gradient(160deg, #F8B9EF 0%, #aa7ecd 100%);
+  padding: 32px;
+  border-radius: 10px;
+  box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 3em;
+}
+
+.deck .card {
+  height: 125px;
+  width: 125px;
+  background: #1B0641;
+  font-size: 0;
+  color: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open {
+  transform: rotateY(0);
+  background: #C4B9F8;
+  cursor: default;
+}
+
+.deck .card.show {
+  font-size: 33px;
+}
+
+.deck .card.match {
+  cursor: default;
+  background: #7636EC;
+  font-size: 33px;
+}
+
+.deck .card.prvent {
+  pointer-events: none;
+}
+
+.deck .card.samePrvent {
+  pointer-events: none;
+  cursor: not-allowed;
+
+}
+
+/*
+ * Styles for the Score Panel
+ */
+.score-panel {
+  text-align: left;
+  width: 345px;
+  margin-bottom: 10px;
+}
+
+.score-panel .stars {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  margin: 0 5px 0 0;
+
+}
+
+.score-panel .stars li {
+  list-style: none;
+  display: inline-block;
+  color: #aa7ecd;
+  font-size: 30px;
+
+}
+
+.score-panel .moves {
+  font-size: 20px;
+
+}
+
+.score-panel .restart {
+  float: right;
+  cursor: pointer;
+  font-size: 40px;
+  color: rgb(54, 26, 104);
+}
+/*Mobile: Google Nexus 5 media*/
+@media only screen and (min-width: 360px) and (max-width: 640px) {
+  body {
+    width: 50%;
+    height: 50%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: #ffffff url('../img/geometry2.jpg');
+    /* Background pattern from https://pngtree.com/freepng/ink-pink-flowers-waft-background_1665182.html by Sandy Farrington */
+    font-family: 'Coda', cursive;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 50;
+    font-size: 20px;
+  }
+  /*
+         * Styles for the deck of cards
+         */
+  .deck {
+    width: 280px;
+    min-height: 70px;
+    background: linear-gradient(160deg, #F8B9EF 0%, #aa7ecd 10%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 1em;
+  }
+
+  .deck .card {
+    height: 40px;
+    width: 50px;
+    background: #1B0641;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 10px;
+    margin: 1px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+  }
+
+  .deck .card.open {
+    transform: rotateY(0);
+    background: #C4B9F8;
+    cursor: default;
+  }
+
+  .deck .card.show {
+    font-size: 33px;
+  }
+
+  .deck .card.match {
+    cursor: default;
+    background: #7636EC;
+    font-size: 10px;
+  }
+
+  .deck .card.prvent {
+    pointer-events: none;
+  }
+  /*
+         * Styles for the Score Panel
+         */
+  .score-panel {
+    text-align: left;
+    width: 145px;
+    margin-bottom: 10px;
+  }
+
+  .score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+  }
+
+  .score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+    color: #aa7ecd;
+    font-size: 10px;
+
+  }
+
+  .score-panel .restart {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .score-panel .moves {
+    font-size: 10px;
+  }
+
+}
