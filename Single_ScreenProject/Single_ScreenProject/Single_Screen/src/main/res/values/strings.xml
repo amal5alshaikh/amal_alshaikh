@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">"Single_Screen  "</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_ent">Enter </string>
+    <string name="inov_info">\n Dammam\n innovu.orders@gmail.com \n  from 8am to 9pm  \n </string>
+    <string name="name_innovu"> Innovation start by you </string>
+</resources>

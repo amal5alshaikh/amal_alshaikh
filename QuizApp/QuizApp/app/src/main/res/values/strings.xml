@@ -1,0 +1,27 @@
+<resources>
+
+    <string name="app_name">Quiz App</string>
+    <string name="head"> \n \t Please Answer The Following Questions:</string>
+
+
+    <string name="first_Q"> \n \t What color is cobalt?</string>
+    <string name="first_Answer_Right">Blue</string>
+    <string name="first_Answer_Wrong1">Red</string>
+    <string name="first_Answer_Wrong2">Black</string>
+
+    <string name="second_Q">\n \t Which device do we use to look at the stars?</string>
+    <string name="second_Answer_Right">Telescope</string>
+    <string name="second_Answer_Wrong1">Telegram</string>
+    <string name="second_Answer_Wrong2">Telemoney</string>
+
+    <string name="third_Q"> \n \t What are the three primary colors?</string>
+    <string name="third_Answer_Right1">Blue</string>
+    <string name="third_Answer_Right2">yellow+Red</string>
+    <string name="third_Answer_Wrong2">white</string>
+
+
+    <string name="fourth_Q">\n \t Which planet is nearest the sun?</string>
+    <string name="hint">\t It start with M</string>
+    <string name="fifth_Q">\n \t Which device was invented by Henry Mill?	</string>
+
+</resources>

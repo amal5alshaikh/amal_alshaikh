@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity$PlaceholderFragment">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_weight="100"
+        android:gravity="center|top"
+        android:weightSum="5"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="2"
+            android:src="@drawable/in"
+            android:layout_alignParentTop="true"  />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/name_innovu"
+            android:textColor="@color/gray"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:typeface="serif"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/Enter_button"
+            android:layout_width="238dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:text="@string/button_ent"
+            android:textSize="30sp"
+            android:textColor="@color/sea"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00e6ac"
+        android:gravity="center"
+        android:text="@string/inov_info"
+        android:textColor="#ffff"
+        android:textSize="18sp"
+        android:layout_weight="1"
+
+        android:typeface="serif"
+        android:id="@+id/textView2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">"NewsApp  "</string>
+    <string name="number_text">"Number of News  "</string>
+    <string name="no_News">"no News to display  "</string>
+    <string name="author">"Author"</string>
+
+
+</resources>

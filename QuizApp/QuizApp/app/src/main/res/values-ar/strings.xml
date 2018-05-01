@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quiz App</string>
+    <string name="fifth_Q" translatable="false">اي جهاز تم اختراعه من قبل هنري مل؟</string>
+    <string name="first_Answer_Right">أزرق</string>
+    <string name="first_Answer_Wrong1">أحمر</string>
+    <string name="first_Answer_Wrong2">أسود</string>
+    <string name="first_Q">\"ماهو لون الكوبالت ؟ \"</string>
+    <string name="fourth_Q">ماهو أقرب كوكب الى الأرض؟</string>
+    <string name="head">ارجو الأجابه على الاسئله التاليه؟</string>
+    <string name="hint">يبدأ بحرف الميم</string>
+    <string name="second_Answer_Right">تلسكوب</string>
+    <string name="second_Answer_Wrong1">تلقرام</string>
+    <string name="second_Answer_Wrong2">تلموني</string>
+    <string name="second_Q">ماهو الجهاز الذي نستخدمه لنشاهد النجوم؟</string>
+    <string name="third_Answer_Right1">أزرق</string>
+    <string name="third_Answer_Right2">أصفر وأحمر</string>
+    <string name="third_Answer_Wrong2">أبيض</string>
+    <string name="third_Q">ماهي الألوان الأساسيه الثلاثه؟</string>
+</resources>

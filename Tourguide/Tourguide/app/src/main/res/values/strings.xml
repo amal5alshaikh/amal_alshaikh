@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Tour Guide</string>
+    <string name="em">\n</string>
+    <string name="Hotels"><font>"\n"<big>\n Hotels</big>"</font></string>
+    <string name="hotel_1">Superb</string>
+    <string name="hotel_1_descraption">In the heart of santorini is this superb property "splendour resort" very very convenient location ,close to market ,superb view and very friendly staff.just a walk to the happening Fira market and bikes and car on rent just a hop away. Splendid splendour</string>
+    <string name="hotel_2">Nautilus Dome</string>
+    <string name="hotel_2_descraption">Located 2 km from Fira, Nautilus Dome Suites is built on the side of the caldera and features a pool surrounded by a wooden deck with sun loungers and umbrellas.</string>
+    <string name="hotel_3">Hotel Hellas</string>
+    <string name="hotel_3_descraption">Situated just a few minutes walk away from Fira’s central square, Hotel Hellas offers accommodation with views to the Aegean Sea and free WiFi in public areas.</string>
+    <string name="Restaurant"><font>"\n"<big>\n Restaurant</big>"</font></string>
+    <string name="restaurant_1">Aktaion</string>
+    <string name="restaurant_1_descraption">Its culinary history has been established and recognised for over 90 years. Three generations of Lefteris Roussos family have all shared the same love and passion for Santorini</string>
+    <string name="restaurant_2">Naousa</string>
+    <string name="restaurant_2_descraption">Delicious food. Great staff. Awesome prices. Must visit. Tapas style. Have to wait a bit for a table as they dont take reservations But thats okIts a great people watching street Really nice staff</string>
+    <string name="restaurant_3">volcanoblue</string>
+    <string name="restaurant_3_descraption">Volcano Blue had the BEST views of Fira and the food was delicious. We were able to make a reservation and were seated immediately after we arrived. The staff was super friendly and accommodating.</string>
+    <string name="shop"><font>"\n"<big>\n shop</big>"</font></string>
+    <string name="shop_1">EPONYMO</string>
+    <string name="shop_1_descraption">This cozy shop has everything you need to take with you , like excellent joyels and art objects. Do not miss to visit ! Very good prices !!</string>
+    <string name="shop_2">Baseggio</string>
+    <string name="shop_2_descraption">Baseggio Santorini Maison Shopping Center is a small tourist shopping center in Fira, Greece. It offers many items of jewelry and clothing. You could visit this place if you’re in the city to collect a few trinkets and souvenirs for yourself and your friends and family</string>
+    <string name="shop_3">Marmarini</string>
+    <string name="shop_3_descraption">Marmarini shop in Oia on the central footpath on the caldera. Youll fin artworks, ceramics and paintings by Greek artists. Also nice, small items for presents and momentoes of Santorini.</string>
+    <string name="Museum">Museum</string>
+    <string name="Museum_1">Museum of Prehistoric Thera</string>
+    <string name="Museum_1_descraption">The Archaeological Museum of Thera is a museum in Fira, Santorini, Greece. It was built in 1960 to replace an older one which had collapsed by the 1956 Amorgos earthquake.</string>
+    <string name="Museum_2">Argyros mansion</string>
+    <string name="Museum_2_descraption">It is by far one of the most amazing old houses. Built in 1888 by Argyros. A fine merchant of wine and a winemaker</string>
+    <string name="Museum_3">Santorini of the past</string>
+    <string name="Museum_3_descraption">Familiarize yourself with the way people lived at Santorini in the past! Exhibitions of this museum are really interesting.</string>
+</resources>
