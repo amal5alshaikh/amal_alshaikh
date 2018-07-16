@@ -7,15 +7,78 @@ import sortBy from 'sort-by';
 import scriptLoader from 'react-async-script-loader';
 import ScriptjsLoader from 'react-script-loader';
 const AnyReactComponent = ({ text }) => <div>{text }</div>;
+let markers=[]
+  let locations=[{
 
-  let markers=[];
+    location:{
+    lat:36.416496,
+    lng:25.4326204
+    
+    },
+    title:'Museum of Prehistoric Thira',
+    address:'Thera 847 00, Greece',
+    
+    },
+    
+    {
+      location:{
+        lat:36.419976,
+        lng:25.4311383
+        
+        },
+        title:'Archaeological Museum of Thera',
+        address:'Erithrou Stavrou, Thira 847 00, Greece',
+    
+        },
+    
+        {
+          location:{
+        lat:36.396735,
+        lng:25.46007
+        
+        },
+        title:'Koutsoyannopoulos Wine Museum',
+        address:'Epar. Od. Messarias - Archeas Thiras, Vothonas 847 00, Greece',
+    
+        },
+    
+    
+        {
+          location:{
+        lat:36.4191673,
+        lng:25.430705
+        
+        },
+        title:'Santozeum',
+        address:'Agiou Mina, Thira 847 00, Greece',
+        showInfo: true,
+    
+        },
+    
+    
+    {
+        
+      location:{
+        lat:36.3804582,
+        lng:25.4499444
+        
+        },
+        title:'Santorini of the past',
+        address:'Epar.Od. Pirgou Kallistis - Profiti Ilia, Pirgos Kallistis 847 00, Greece',
+        showInfo: true,
+    
+    
+        }];
   let infoBox=[];
   
+
   class App extends Component {
  
     constructor(props) {
       super(props);
-    this.state = { map:{},query:'' ,requestWasSuccessful:true,locationInfo:[],clikedMarker:''}
+    this.state = {
+      
+      map:{},query:'' ,requestWasSuccessful:true,locationInfo:[],clikedMarker:''}
     }
   
     componentWillReceiveProps({isScriptLoadSucceed}){
@@ -36,19 +99,32 @@ console.log('somthing went wrong');
 this.setState({requestWasSuccessful:false})
 
 }
+for (var i = 0; i < locations.length; i++) {
+  // Get the position from the location array.
+  var position = locations[i].location;
+  var title = locations[i].title;
+
 let showMarkers=new window.google.maps.Marker({
-  postion:locationInfo.location,
-  map:map,
-  animation: window.google.maps.Animation.DROP,
-  title:locationInfo.title
+  map: map,
+          position: position,
+          title:title,
+          animation: window.google.maps.Animation.DROP,
+
+        });
+         var infowindow= new window.google.maps.InfoWindow({
+  content:'this test'
+})
+
+showMarkers.addListener('click',function(){
+infowindow.open(map,showMarkers);
+
 })
 markers.push(showMarkers)
 
 }
- 
 
 
-  
+}
 
 
  render() {
@@ -60,7 +136,7 @@ markers.push(showMarkers)
     return (
          requestWasSuccessful ?  (
 
-                     <div id="map container" role="application" tabIndex="-1">
+ <div id="map container" role="application" tabIndex="-1">
           <title>Neighborhood Map</title>
           <div id="floating-panel">
       <input id="address" type="textbox" VALUE="Santorini, Gress"/>
@@ -70,7 +146,7 @@ markers.push(showMarkers)
       <div id="secondComponent">
       </div> </div>
    
-   <div id='map' role="application"></div>
+   <div id='map' role="application"> </div>
     </div>  
          ):(
            <h1>  Map </h1>  
