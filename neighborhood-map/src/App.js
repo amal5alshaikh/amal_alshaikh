@@ -8,6 +8,7 @@ import scriptLoader from 'react-async-script-loader';
 import ScriptjsLoader from 'react-script-loader';
 const AnyReactComponent = ({ text }) => <div>{text }</div>;
 let markers=[]
+
   let locations=[{
 
     location:{
@@ -77,8 +78,8 @@ let markers=[]
     constructor(props) {
       super(props);
     this.state = {
-      
-      map:{},query:'' ,requestWasSuccessful:true,locationInfo:[],clikedMarker:''}
+      infowindow:{},
+      map:{},query:'' ,requestWasSuccessful:true,infowindows:[],clikedMarker:''}
     }
   
     componentWillReceiveProps({isScriptLoadSucceed}){
@@ -99,6 +100,7 @@ console.log('somthing went wrong');
 this.setState({requestWasSuccessful:false})
 
 }
+
 for (var i = 0; i < locations.length; i++) {
   // Get the position from the location array.
   var position = locations[i].location;
@@ -109,20 +111,27 @@ let showMarkers=new window.google.maps.Marker({
           position: position,
           title:title,
           animation: window.google.maps.Animation.DROP,
-
+id:i
         });
-         var infowindow= new window.google.maps.InfoWindow({
-  content:'this test'
-})
-
+        var largeInfowindow = new window.google.maps.InfoWindow();
+var bounds=new window.google.maps.LatLngBounds();
 showMarkers.addListener('click',function(){
-infowindow.open(map,showMarkers);
+popinfoWindow(this,largeInfowindow);
 
 })
 markers.push(showMarkers)
 
 }
+function popinfoWindow(showMarkers ,infowindow){
+if(infowindow.showMarkers!=showMarkers){
+infowindow.showMarkers=showMarkers;
+infowindow.setContent('<div>'+{title}+'</div>');
+infowindow.open(map,showMarkers);
+infowindow.addListener('closeclick',function(){
+  infowindow.setMarker(null);})}
 
+
+}
 
 }
 
