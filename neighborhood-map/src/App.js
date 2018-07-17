@@ -1,76 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
-import {locationInfo} from './locationInfo'
 import fetchJsonp from 'fetch-jsonp';
 import escapeRegExp from 'escape-string-regexp';
 import sortBy from 'sort-by';
 import scriptLoader from 'react-async-script-loader';
 import ScriptjsLoader from 'react-script-loader';
+import {locations} from './locations';
+
 const AnyReactComponent = ({ text }) => <div>{text }</div>;
 let markers=[]
 
-  let locations=[{
-
-    location:{
-    lat:36.416496,
-    lng:25.4326204
-    
-    },
-    title:'Museum of Prehistoric Thira',
-    address:'Thera 847 00, Greece',
-    
-    },
-    
-    {
-      location:{
-        lat:36.419976,
-        lng:25.4311383
-        
-        },
-        title:'Archaeological Museum of Thera',
-        address:'Erithrou Stavrou, Thira 847 00, Greece',
-    
-        },
-    
-        {
-          location:{
-        lat:36.396735,
-        lng:25.46007
-        
-        },
-        title:'Koutsoyannopoulos Wine Museum',
-        address:'Epar. Od. Messarias - Archeas Thiras, Vothonas 847 00, Greece',
-    
-        },
-    
-    
-        {
-          location:{
-        lat:36.4191673,
-        lng:25.430705
-        
-        },
-        title:'Santozeum',
-        address:'Agiou Mina, Thira 847 00, Greece',
-        showInfo: true,
-    
-        },
-    
-    
-    {
-        
-      location:{
-        lat:36.3804582,
-        lng:25.4499444
-        
-        },
-        title:'Santorini of the past',
-        address:'Epar.Od. Pirgou Kallistis - Profiti Ilia, Pirgos Kallistis 847 00, Greece',
-        showInfo: true,
-    
-    
-        }];
-  let infoBox=[];
+   let infoBox=[];
   
 
   class App extends Component {
@@ -81,7 +21,13 @@ let markers=[]
       infowindow:{},
       map:{},query:'' ,requestWasSuccessful:true,infowindows:[],clikedMarker:''}
     }
-  
+    clearQuery = () => {
+      this.setState({ query: '' })
+    }
+    updateQuery = (query) => {
+      this.setState({ query: query.trim() })
+    }
+
     componentWillReceiveProps({isScriptLoadSucceed}){
   if(isScriptLoadSucceed){
     var map=new  window.google.maps.Map(document.getElementById('map'),{
@@ -114,18 +60,19 @@ let showMarkers=new window.google.maps.Marker({
 id:i
         });
         var largeInfowindow = new window.google.maps.InfoWindow();
-var bounds=new window.google.maps.LatLngBounds();
+
 showMarkers.addListener('click',function(){
 popinfoWindow(this,largeInfowindow);
 
 })
-markers.push(showMarkers)
-
+//push the marker to an arry of showmarker after a loop
+markers.push(showMarkers);
+//extend the boundaaris of the map for the showmarker
 }
 function popinfoWindow(showMarkers ,infowindow){
 if(infowindow.showMarkers!=showMarkers){
 infowindow.showMarkers=showMarkers;
-infowindow.setContent('<div>'+{title}+'</div>');
+infowindow.setContent('<div>'+showMarkers.title+'</div>');
 infowindow.open(map,showMarkers);
 infowindow.addListener('closeclick',function(){
   infowindow.setMarker(null);})}
@@ -133,27 +80,44 @@ infowindow.addListener('closeclick',function(){
 
 }
 
-}
 
+
+}
 
  render() {
    
    
       const {map, requestWasSuccessful} = this.state;
-   
+      function showListing(){
+        var bounds=new window.google.maps.LatLngBounds();
+      for(var i=0;i<markers.length;i++){
+      markers[i].setMap(map)
+      bounds.extend(markers[i].position);
+      }
+      map.fitBounds(bounds);
+      }
+   function hideListings() {
+  for (var i = 0; i < markers.length; i++) {
+    markers[i].setMap(null);
+  }}
     
     return (
          requestWasSuccessful ?  (
 
  <div id="map container" role="application" tabIndex="-1">
-          <title>Neighborhood Map</title>
+                   <title>Neighborhood Map</title>
+
           <div id="floating-panel">
-      <input id="address" type="textbox" VALUE="Santorini, Gress"/>
-      <input id="submit" type="button" value="Find"/>
-      <div id="firstComponent">
+          <h4>Greess</h4>
+          <div>
+      <input id="search" type="textbox"  />
+      <input id="buttom" type="button" value="Find" onClick={()=>showListing()}/>
+      <ol class='list'>
+     { locations.map((locations)=>
+      <ul >{locations.title}</ul>)}
+      </ol>
       </div>
-      <div id="secondComponent">
-      </div> </div>
+      </div>
    
    <div id='map' role="application"> </div>
     </div>  
