@@ -52,3 +52,12 @@ position: absolute;
   text-align: left;
   width: 340px;
 }
+.list{
+ width: auto;
+ padding: 0;
+}
+ .list ul{
+  width: auto;
+  padding: 0;
+
+ }
